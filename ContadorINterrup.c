@@ -73,7 +73,7 @@ void gpio_irq_handler(uint gpio, uint32_t events) {
     // Obtém o tempo atual em microssegundos
     uint32_t current_time = to_us_since_boot(get_absolute_time());
 
-    if (current_time - last_time > 200000) // 200 ms de debouncing
+    if (current_time - last_time > 250000) // 250 ms de debouncing
     {
         last_time = current_time; // Atualiza o tempo do último evento
 
